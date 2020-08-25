@@ -59,4 +59,3 @@ jobs:
                 "\
                 "https://api.chatwork.com/v2/rooms/$ROOM_ID/messages"
             fi
-            
