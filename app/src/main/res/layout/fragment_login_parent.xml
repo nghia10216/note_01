@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_50"
+    tools:context=".screen.login.LoginParentFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/loginTabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311"
+        app:tabBackground="@color/pink_50"
+        app:tabIndicatorColor="@color/purple_400"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/purple_400" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/loginViewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cherub_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTabLayout" />
+
+    <TextView
+        android:id="@+id/titleAppTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/grand_hotel"
+        android:gravity="center"
+        android:text="@string/logo_name"
+        android:textColor="@color/indigo_A600"
+        android:textSize="@dimen/sp_100"
+        app:layout_constraintBottom_toTopOf="@+id/loginTabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+</androidx.constraintlayout.widget.ConstraintLayout>

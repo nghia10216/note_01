@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">note_01</string>
+    <string name="logo_name">Note</string>
+    <string name="account">Tài khoản</string>
+    <string name="password">Mật khẩu</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="register">Đăng Ký</string>
+    <string name="remember_password">Ghi nhớ mật khẩu</string>
 </resources>
