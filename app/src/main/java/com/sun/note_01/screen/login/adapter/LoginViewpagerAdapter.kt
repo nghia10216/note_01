@@ -9,7 +9,10 @@ import com.sun.note_01.screen.login.fragment.childregister.RegisterFragment
 
 class LoginViewpagerAdapter(fm: FragmentManager, context: Context) : FragmentStatePagerAdapter(fm) {
 
-    private val listTab = arrayOf(context.resources.getString(R.string.account), context.resources.getString(R.string.password))
+    private val listTab = arrayOf(
+        context.resources.getString(R.string.login),
+        context.resources.getString(R.string.register)
+    )
     private val listFragment = arrayOf(LoginFragment(), RegisterFragment())
 
     override fun getItem(position: Int) = when (position) {
