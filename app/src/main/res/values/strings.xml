@@ -7,4 +7,5 @@
     <string name="login">Đăng Nhập</string>
     <string name="register">Đăng Ký</string>
     <string name="remember_password">Ghi nhớ mật khẩu</string>
+    <string name="error_syntax">Nhập không đúng cú pháp</string>
 </resources>
