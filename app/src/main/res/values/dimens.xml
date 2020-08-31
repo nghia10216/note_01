@@ -6,8 +6,6 @@
     <dimen name="dp_40">40dp</dimen>
     <dimen name="dp_110">110dp</dimen>
     <dimen name="dp_270">270dp</dimen>
-
     <dimen name="sp_15">15sp</dimen>
     <dimen name="sp_100">100sp</dimen>
-
 </resources>
