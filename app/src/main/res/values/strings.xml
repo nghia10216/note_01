@@ -6,11 +6,22 @@
     <string name="confirm_password">Xác nhận mật khẩu</string>
     <string name="login">Đăng Nhập</string>
     <string name="register">Đăng Ký</string>
+    <string name="logout">Đăng Xuất</string>
     <string name="remember_password">Ghi nhớ mật khẩu</string>
     <string name="error_syntax">Nhập không đúng cú pháp</string>
     <string name="login_success">Đăng Nhập Thành Công</string>
     <string name="login_error">Gặp sự cố máy chủ vui lòng thử lại</string>
     <string name="login_failed">Sai tài khoản hoặc mật khẩu</string>
     <string name="register_failed">Tài khoản đã bị trùng</string>
-
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="add_category">Thêm danh mục</string>
+    <string name="title">Tiêu Đề</string>
+    <string name="new_note">Ghi Chú mới</string>
+    <string name="new_category">Mới</string>
+    <string name="category">Danh Mục</string>
+    <string name="all_note">Tất cả Ghi Chú</string>
+    <string name="favorite">Ưa thích của tôi</string>
+    <string name="deleted">Đã xóa gần đây</string>
+    <string name="note">Ghi Chú</string>
 </resources>
