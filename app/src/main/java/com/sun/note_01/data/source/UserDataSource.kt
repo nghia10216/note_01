@@ -9,6 +9,11 @@ interface UserDataSource {
             email: String,
             password: String, listener: OnFetchDataJsonListener<Int>
         )
+
+        fun register(
+            email: String,
+            password: String, listener: OnFetchDataJsonListener<Int>
+        )
     }
 
     interface Local {

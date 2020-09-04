@@ -9,9 +9,19 @@ class UserRemoteDataSource : UserDataSource.Remote {
 
     override fun login(email: String, password: String, listener: OnFetchDataJsonListener<Int>) {
         GetJsonFromUrl(listener, "").execute(
-            Constant.LOGIN_URL,
+            Constant.BASE_URL + Constant.LOGIN_PATH,
             Constant.METHOD_PUT,
             DataTypeResponse.Login.name,
+            email,
+            password
+        )
+    }
+
+    override fun register(email: String, password: String, listener: OnFetchDataJsonListener<Int>) {
+        GetJsonFromUrl(listener, "").execute(
+            Constant.BASE_URL + Constant.REGISTER_PATH,
+            Constant.METHOD_POST,
+            DataTypeResponse.Register.name,
             email,
             password
         )

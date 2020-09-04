@@ -4,7 +4,9 @@ import java.util.regex.Pattern
 
 object Constant {
 
-    const val LOGIN_URL = "http://openedu35-dn.somee.com/api/user/login"
+    const val BASE_URL = "http://openedu35-dn.somee.com/api/"
+    const val LOGIN_PATH = "user/login"
+    const val REGISTER_PATH = "user/registerUser"
     const val RESPONSE_FAILED = -1
     const val METHOD_PUT = "PUT"
     const val METHOD_POST = "POST"

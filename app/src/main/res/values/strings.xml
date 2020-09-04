@@ -11,5 +11,6 @@
     <string name="login_success">Đăng Nhập Thành Công</string>
     <string name="login_error">Gặp sự cố máy chủ vui lòng thử lại</string>
     <string name="login_failed">Sai tài khoản hoặc mật khẩu</string>
+    <string name="register_failed">Tài khoản đã bị trùng</string>
 
 </resources>

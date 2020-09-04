@@ -1,5 +1,6 @@
 package com.sun.note_01.screen.login.fragment.childlogin
 
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_login_child.*
 class LoginFragment : Fragment(), LoginContract.View {
 
     private var loginPresenter: LoginContract.Presenter? = null
-
+    private var progressDialog: ProgressDialog? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +32,7 @@ class LoginFragment : Fragment(), LoginContract.View {
 
         loginButton.setOnClickListener {
             loginPresenter?.setRememberAccount(rememberCheckBox.isChecked)
-            loginProgressBar.visibility = View.VISIBLE
+            progressDialog?.show()
             val username = usernameTextInput?.editText?.text.toString()
             val password = passwordTextInput?.editText?.text.toString()
             loginPresenter?.login(username, password)
@@ -39,6 +40,7 @@ class LoginFragment : Fragment(), LoginContract.View {
     }
 
     private fun initData() {
+        progressDialog = ProgressDialog(context)
         loginPresenter = context?.let {
             LoginPresenter(
                 UserRepository.getInstance(
@@ -51,16 +53,16 @@ class LoginFragment : Fragment(), LoginContract.View {
     }
 
     override fun onErrorValidate() {
-        loginProgressBar.visibility = View.INVISIBLE
+        progressDialog?.dismiss()
         errorTextView.text = getString(R.string.error_syntax)
     }
 
     override fun onLoginSuccess() {
-        loginProgressBar.visibility = View.INVISIBLE
+        progressDialog?.dismiss()
     }
 
     override fun onError(exception: Exception?) {
-        loginProgressBar.visibility = View.INVISIBLE
+        progressDialog?.dismiss()
         if (exception == null) {
             context.let { Toast.makeText(it, R.string.login_failed, Toast.LENGTH_SHORT).show() }
         } else {

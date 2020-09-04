@@ -31,7 +31,7 @@ class GetJsonFromUrl<T>(
                 doOutput = method != Constant.METHOD_GET
                 connect()
             }
-            if (method == Constant.METHOD_PUT) {
+            if (method == Constant.METHOD_PUT || method == Constant.METHOD_POST) {
                 val email = params[POSITION_EMAIL]
                 val password = params[POSITION_PASSWORD]
                 val jsonObject = ParseJson().createJson(email!!, password!!)
@@ -68,7 +68,7 @@ class GetJsonFromUrl<T>(
     override fun onPostExecute(dataResponse: DataResponse?) {
         super.onPostExecute(dataResponse)
         when (dataResponse?.dataType) {
-            DataTypeResponse.Login.name -> when {
+            DataTypeResponse.Login.name, DataTypeResponse.Register.name -> when {
                 dataResponse.data.isEmpty() -> listener.onError(exception)
                 dataResponse.data.toInt() == Constant.RESPONSE_FAILED -> listener.onError(exception)
                 dataResponse.data.toInt() != Constant.RESPONSE_FAILED -> listener.onSuccess(
@@ -89,7 +89,7 @@ class GetJsonFromUrl<T>(
 }
 
 enum class DataTypeResponse(private val dataType: String) {
-    Login("Login")
+    Login("Login"), Register("Register")
 }
 
 data class DataResponse(val data: String, val dataType: String)

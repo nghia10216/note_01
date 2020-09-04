@@ -11,6 +11,10 @@ class UserRepository private constructor(
         remote.login(email, password, listener)
     }
 
+    override fun register(email: String, password: String, listener: OnFetchDataJsonListener<Int>) {
+        remote.register(email, password, listener)
+    }
+
     override fun getUserIdLocal() = local.getUserIdLocal()
 
     override fun setUserIdLocal(userId: Int) {
