@@ -8,4 +8,8 @@
     <string name="register">Đăng Ký</string>
     <string name="remember_password">Ghi nhớ mật khẩu</string>
     <string name="error_syntax">Nhập không đúng cú pháp</string>
+    <string name="login_success">Đăng Nhập Thành Công</string>
+    <string name="login_error">Gặp sự cố máy chủ vui lòng thử lại</string>
+    <string name="login_failed">Sai tài khoản hoặc mật khẩu</string>
+
 </resources>

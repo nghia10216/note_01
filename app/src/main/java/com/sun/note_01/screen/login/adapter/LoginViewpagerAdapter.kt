@@ -13,6 +13,7 @@ class LoginViewpagerAdapter(fm: FragmentManager, context: Context) : FragmentSta
         context.resources.getString(R.string.login),
         context.resources.getString(R.string.register)
     )
+
     private val listFragment = arrayOf(LoginFragment(), RegisterFragment())
 
     override fun getItem(position: Int) = when (position) {

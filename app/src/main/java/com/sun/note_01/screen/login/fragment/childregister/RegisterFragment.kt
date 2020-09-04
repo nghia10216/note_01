@@ -28,7 +28,7 @@ class RegisterFragment : Fragment(), RegisterContract.View {
             val username = usernameTextInput.editText?.text.toString()
             val password = passwordTextInput.editText?.text.toString()
             val confirmPassword = confirmPasswordTextInput.editText?.text.toString()
-            registerPresenter?.receiverData(username, password, confirmPassword)
+            registerPresenter?.register(username, password, confirmPassword)
         }
     }
 
